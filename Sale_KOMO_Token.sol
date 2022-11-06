@@ -21,7 +21,7 @@ contract TokenKomoSale {
         tokenOwner = msg.sender;
     }
 
-    function PurchaseOneToken() public payable {
+    function PurchaseTokens() public payable {
         require(msg.value >= tokenPriceInWei, "not enough token");
         uint tokenToTransfer = msg.value / tokenPriceInWei;
         uint remainder = msg.value - tokenToTransfer*tokenPriceInWei;
